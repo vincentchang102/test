@@ -109,6 +109,7 @@ with col2:
                 st.write(f"Response from backend: {result}")
             else:
                 st.write("Error with backend request")
+                st.write(res.statuscode)
         else:
             st.markdown("<br>", unsafe_allow_html=True)
             st.markdown("<div class='response-box'>Please enter a question to get a response!</div>", unsafe_allow_html=True)
