@@ -1,5 +1,5 @@
 import streamlit as st
-
+import requests
 # Set the page title and layout
 st.set_page_config(page_title="NavAI Dashboard", page_icon=":robot_face:", layout="centered")
 
@@ -103,7 +103,12 @@ with col2:
     if st.button("Ask NavAI"):
         if question:
             st.markdown("<br>", unsafe_allow_html=True)
-            st.markdown(f"<div class='response-box'>NavAI's Response to '{question}': <br><br> NavAI is currently thinking... Check back soon!</div>", unsafe_allow_html=True)
+            res = requests.post(https://nav-ai-443503.ue.r.appspot.com/chat, , json={'input': user_input})
+            if response.status_code == 200:
+                result = response.json()['result']
+                st.write(f"Response from backend: {result}")
+        else:
+            st.write("Error with backend request")
         else:
             st.markdown("<br>", unsafe_allow_html=True)
             st.markdown("<div class='response-box'>Please enter a question to get a response!</div>", unsafe_allow_html=True)
