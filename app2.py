@@ -107,8 +107,8 @@ with col2:
             if response.status_code == 200:
                 result = response.json()['result']
                 st.write(f"Response from backend: {result}")
-        else:
-            st.write("Error with backend request")
+            else:
+                st.write("Error with backend request")
         else:
             st.markdown("<br>", unsafe_allow_html=True)
             st.markdown("<div class='response-box'>Please enter a question to get a response!</div>", unsafe_allow_html=True)
