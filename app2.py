@@ -109,7 +109,7 @@ with col2:
                 if "reply" in response_json:
                     result = response_json["reply"]
                     st.write(f"Response from backend: {result}")
-                else:s
+                else:
                     st.write("none")
             else:
                 st.write(f"Error with backend request {res.text}")
