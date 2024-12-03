@@ -105,7 +105,7 @@ with col2:
             st.markdown("<br>", unsafe_allow_html=True)
             res = requests.post("https://nav-ai-443601.ue.r.appspot.com/chat", json={'input': question})
             if res.status_code == 200:
-               response_json = res.json()
+                response_json = res.json()
                 if "reply" in response_json:
                     result = response_json["reply"]
                     st.write(f"Response from backend: {result}")
