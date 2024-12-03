@@ -108,9 +108,9 @@ with col2:
                 response_json = res.json()
                 if "reply" in response_json:
                     result = response_json["reply"]
-                    st.write(f"Response from backend: {result}")
+                    st.write(f"{result}")
                 else:
-                    st.write("none")
+                    st.write("No response from the backend.")
             else:
                 st.write(f"Error with backend request {res.text}")
                 st.write(res.status_code)
