@@ -103,7 +103,7 @@ with col2:
     if st.button("Ask NavAI"):
         if question:
             st.markdown("<br>", unsafe_allow_html=True)
-            res = requests.post("https://resonant-cairn-443623-j0.ue.r.appspot.com/api/chat", json={'input': question})
+            res = requests.post("https://resonant-cairn-443623-j0.ue.r.appspot.com/api/data", json={'input': question})
             if res.status_code == 200:
                 result = res.json()['result']
                 st.write(f"Response from backend: {result}")
