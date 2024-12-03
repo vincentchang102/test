@@ -108,7 +108,7 @@ with col2:
                 result = res.json()['result']
                 st.write(f"Response from backend: {result}")
             else:
-                st.write("Error with backend request {error}")
+                st.write(f"Error with backend request {error}")
                 st.write(res.status_code)
         else:
             st.markdown("<br>", unsafe_allow_html=True)
